@@ -116,10 +116,6 @@ This project is a fully functional Full Stack Task Management Application featur
     ✔️ Swagger UI
     http://localhost:8080/swagger-ui.html
     
-    ✔️ Postman Collection
-    Included in project root:
-    postman_collection.json
-    
 👤 Author
 
 Deep Bendale
