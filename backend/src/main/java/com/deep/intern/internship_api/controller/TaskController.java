@@ -26,12 +26,10 @@ public class TaskController {
         String username = auth.getName();
         User user = userRepository.findByUsername(username).orElseThrow();
 
-        // Admin gets ALL tasks
         if (user.getRole().equals("ROLE_ADMIN")) {
             return ResponseEntity.ok(taskRepository.findAll());
         }
 
-        // User only gets their own tasks
         return ResponseEntity.ok(taskRepository.findByOwner(user));
     }
 

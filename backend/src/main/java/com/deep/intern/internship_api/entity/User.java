@@ -25,10 +25,10 @@ public class User {
     private String email;
 
     @Column(nullable = false)
-    private String password; // stored as BCrypt hash
+    private String password; 
 
     @Column(nullable = false)
-    private String role; // ROLE_USER or ROLE_ADMIN
+    private String role; 
 
     private Instant createdAt = Instant.now();
 }

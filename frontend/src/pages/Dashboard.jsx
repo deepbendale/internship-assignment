@@ -13,7 +13,6 @@ function Dashboard() {
     description: "",
   });
 
-  // Fetch tasks on mount
   useEffect(() => {
     fetchTasks();
   }, []);
@@ -66,8 +65,6 @@ function Dashboard() {
 
   return (
     <div className="min-h-screen bg-gray-100 p-6">
-      
-      {/* Header */}
       <div className="flex justify-between items-center mb-8">
         <h1 className="text-3xl font-bold">Dashboard</h1>
 
@@ -79,7 +76,6 @@ function Dashboard() {
         </button>
       </div>
 
-      {/* Add Task Form */}
       <div className="bg-white shadow-md p-6 rounded-md max-w-xl mb-8">
         <h2 className="text-xl font-semibold mb-4">Add New Task</h2>
 
@@ -88,9 +84,7 @@ function Dashboard() {
             type="text"
             placeholder="Task title"
             value={newTask.title}
-            onChange={(e) =>
-              setNewTask({ ...newTask, title: e.target.value })
-            }
+            onChange={(e) => setNewTask({ ...newTask, title: e.target.value })}
             required
             className="w-full p-3 border rounded-md focus:ring-2 focus:ring-blue-400"
           />
@@ -114,7 +108,6 @@ function Dashboard() {
         </form>
       </div>
 
-      {/* Edit Task Modal */}
       {editTask && (
         <div className="bg-white shadow-md p-6 rounded-md max-w-xl mb-8">
           <h2 className="text-xl font-semibold mb-4">Edit Task</h2>
@@ -173,7 +166,6 @@ function Dashboard() {
         </div>
       )}
 
-      {/* Task List */}
       <h2 className="text-2xl font-semibold mb-4">Your Tasks</h2>
 
       {tasks.length === 0 ? (
