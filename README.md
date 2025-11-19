@@ -1,6 +1,7 @@
 🚀 Internship Assignment — Full Stack Application
 
 Author: Deep Bendale
+
 Role Applied: Backend Developer Intern
 
 Tech Stack:
